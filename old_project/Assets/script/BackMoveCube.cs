@@ -14,7 +14,7 @@ public class BackMoveCube : MonoBehaviour
         
         rBody = this.GetComponent<Rigidbody>();
         rBody.useGravity = false;
-	localGravity = Physics.gravity * -1.0f;
+	    localGravity = Physics.gravity * -1.0f;
 
     }
 
@@ -23,6 +23,7 @@ public class BackMoveCube : MonoBehaviour
     {
         
     }
+    
     private void FixedUpdate () 
     {
         SetLocalGravity (); //重力をAddForceでかけるメソッドを呼ぶ。

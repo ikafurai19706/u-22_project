@@ -27,25 +27,23 @@ public class CameraManager : MonoBehaviour
         if (Mathf.Abs(mx) > 0.001f)
         {
             gy = GravityManager.nowgravity.y;
-	    if(gy == 0)
-	    {
+            if(gy == 0)
+            {
 
-		gy = 98.1f;
+                gy = 98.1f;
 
-	    }
+            }
             transform.RotateAround(player.transform.position, GravityManager.nowgravity, mx * -1.0f);
         }
- 
+    
         // Y方向に一定量移動していれば縦回転
         if (Mathf.Abs(my) > 0.001f)
         {
             gx = GravityManager.nowgravity.x;
-	    if(gx == 0)
-	    {
-
-		gx = -98.1f;
-
-	    }
+            if(gx == 0)
+            {
+                gx = -98.1f;
+            }
             transform.RotateAround(player.transform.position, transform.right, my * gx / 98.1f * -1.0f);
         }
 
